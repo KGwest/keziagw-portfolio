@@ -97,3 +97,29 @@ body::before {
     width: 100%;
   }
 }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: transparent;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--klein-blue);
+  text-shadow: 0 0 15px rgba(0, 47, 167, 0.6);
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--klein-pink);
+  max-width: 700px;
+}
