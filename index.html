@@ -38,5 +38,19 @@
   <footer>
     <p>&copy; 2025 Kezia Grace West</p>
   </footer>
-</body>
+ <script>
+  // Automatically hide the loading screen after 12 seconds
+  setTimeout(() => {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.opacity = '0';
+    loadingScreen.style.transition = 'opacity 1s ease-out';
+
+    // Fully remove it from the DOM after fade
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 1000);
+  }, 12000);
+</script>
+
+  </body>
 </html>

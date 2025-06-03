@@ -7,7 +7,8 @@ background: linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)),
   width: 100vw; height: 100vh;
   z-index: 9999;
   overflow: hidden;
-  background: url('2015_CKS_10337_0007_000(yves_klein_relief_planetaire_bleu020208).jpg') center/cover no-repeat;
+  background: url('2015_cks_yves_klein_relief_planetaire_bleu.jpg') center/cover no-repeat;
+  transition: opacity 2s ease-out;
 }
 
 #loading-video {
