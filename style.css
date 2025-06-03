@@ -1,9 +1,13 @@
+background: linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.8)),
+            url('2015_CKS_10337_0007_000(yves_klein_relief_planetaire_bleu020208).jpg') center/cover no-repeat;
+
 #loading-screen {
   position: fixed;
   top: 0; left: 0;
   width: 100vw; height: 100vh;
   z-index: 9999;
   overflow: hidden;
+  background: url('2015_CKS_10337_0007_000(yves_klein_relief_planetaire_bleu020208).jpg') center/cover no-repeat;
 }
 
 #loading-video {
@@ -16,12 +20,30 @@
   left: 0;
 }
 
+#loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  z-index: 1000;
+  animation: fadeInText 2s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 #overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Start at 60% */
-  animation: fadeOverlay 12s forwards;
+  background-color: rgba(0, 0, 0, 0.6); /* 60% black veil */
+  animation: fadeOverlay 12s ease-out forwards;
 }
 
 @keyframes fadeOverlay {
@@ -45,7 +67,7 @@
 #loading-bar {
   height: 100%;
   width: 0%;
-  background: #FFD700;
+  background: #002FA7; /* Yves Klein Blue */
   animation: fillBar 12s linear forwards;
 }
 
