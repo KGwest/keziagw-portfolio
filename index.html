@@ -5,21 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kezia West – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-    <div id="loading-screen">
-        <video autoplay muted playsinline id="loading-video">
-            <source src="kezia_loading_12s.mp4" type="video/mp4" />
-        </video>
-        <div id="overlay"></div>
-        <div id="loading-bar-wrapper">
-            <div id="loading-bar"></div>
-        </div>
-        <div id="loading-text">Loading...</div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <video autoplay muted playsinline id="loading-video">
+      <source src="kezia_loading_12s.mp4" type="video/mp4" />
+    </video>
+    <div id="overlay"></div>
+    <div id="loading-bar-wrapper">
+      <div id="loading-bar"></div>
     </div>
-<script>
+    <div id="loading-text">Loading...</div>
+  </div>
+
+  <!-- Main Content -->
   <header>
     <h1>Kezia West</h1>
     <p>Creative technologist, linguistic systems thinker, and builder of immersive tools.</p>
@@ -38,19 +41,18 @@
   <footer>
     <p>&copy; 2025 Kezia Grace West</p>
   </footer>
- <script>
-  // Automatically hide the loading screen after 12 seconds
-  setTimeout(() => {
-    const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.opacity = '0';
-    loadingScreen.style.transition = 'opacity 1s ease-out';
 
-    // Fully remove it from the DOM after fade
+  <!-- JavaScript to hide loading screen -->
+  <script>
     setTimeout(() => {
-      loadingScreen.style.display = 'none';
-    }, 1000);
-  }, 12000);
-</script>
+      const loadingScreen = document.getElementById('loading-screen');
+      loadingScreen.style.opacity = '0';
+      loadingScreen.style.transition = 'opacity 1s ease-out';
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 1000);
+    }, 12000);
+  </script>
 
-  </body>
+</body>
 </html>
