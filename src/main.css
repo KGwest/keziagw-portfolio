@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: theme('fontFamily.sans');
+}
+
+/* SCROLL SECTION */
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.light ::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #002fa7; /* Yves Klein Blue */
+  border-radius: 10px;
+}
+
+/* Force Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.light ::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #002fa7; /* Yves Klein Blue */
+  border-radius: 10px;
+}
+
+/* SCROLL SECTION END */

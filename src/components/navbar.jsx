@@ -1,27 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const root = window.document.documentElement;
+    const html = document.documentElement;
+    const body = document.getElementById("body");
+
     if (darkMode) {
-      root.classList.add('dark');
+      html.classList.add("dark");
+      body.classList.remove("light");
+      body.classList.add("dark");
+      body.classList.replace("bg-white", "bg-black");
+      body.classList.replace("text-black", "text-white");
     } else {
-      root.classList.remove('dark');
+      html.classList.remove("dark");
+      body.classList.remove("dark");
+      body.classList.add("light");
+      body.classList.replace("bg-black", "bg-white");
+      body.classList.replace("text-white", "text-black");
     }
   }, [darkMode]);
 
   return (
-    <nav className="w-full p-4 flex justify-between items-center fixed top-0 bg-white dark:bg-gray-800 shadow z-50">
-      <h1 className="text-xl font-bold">Kezia West</h1>
+    <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-50 bg-transparent px-4">
+      <h1 className="text-2xl font-semibold tracking-wide">Kezia West</h1>
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="w-8 h-8 rounded-full border-2 border-gray-700 dark:border-white flex items-center justify-center"
+        className="w-10 h-10 flex items-center justify-center border-2 border-current rounded-full text-xl"
+        aria-label="Toggle Theme"
       >
-        {darkMode ? '🌙' : '☀️'}
+        {darkMode ? "🌙" : "☀️"}
       </button>
-    </nav>
+    </div>
   );
 };
 
