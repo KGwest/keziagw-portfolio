@@ -1,26 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import IPAGuessCup from './IPAGuessCup';
 
 const projects = [
   {
     id: 1,
-    title: 'Lalalia (NLP Song App)',
-    description: 'Detects singing input and plays instrumental versions.',
-    content: '🎤 [Lalalia Preview Screen]',
-    ariaLabel: 'Project 1: Lalalia. An app that plays music based on voice input.',
+    title: "G-U-E-S-S (Association Game)",
+    description: "A React guessing game where you try to find the AI's secret word by association.",
+    content: (
+      <iframe
+        src="https://kgwest.github.io/g-u-e-s-s/"
+        title="G-U-E-S-S Association Game"
+        className="w-full h-32 sm:h-72 md:h-96 rounded-lg border-0 bg-black"
+        allow="fullscreen"
+      />
+    ),
+    ariaLabel: "Project 1: G-U-E-S-S. Association guessing game with AI bot.",
   },
   {
     id: 2,
-    title: 'PhonoTrack (Speech Classifier)',
-    description: 'Naive Bayes vs Neural Net for messy language sets.',
-    content: '🧠 [PhonoTrack ML Demo]',
-    ariaLabel: 'Project 2: PhonoTrack. Speech classifier with machine learning.',
+    title: "IPA Guess & Cup Toss",
+    description: "Guess which IPA symbol links the words. Score for a chance to toss a ball in a cup!",
+    content: <IPAGuessCup />,
+    ariaLabel: "Project 2: IPA guessing and cup toss mini-game.",
   },
   {
     id: 3,
-    title: 'Reward Generator',
-    description: 'A fun mental health app that awards surprise treats.',
-    content: '🎁 [Mental Health Reward Tool]',
-    ariaLabel: 'Project 3: Reward Generator. Gamified self-care reward interface.',
+    title: "Reward Generator",
+    description: "A fun mental health app that awards surprise treats.",
+    content: (
+      <iframe
+        src="https://kgwest.github.io/reward_generator/"
+        title="Reward Generator"
+        className="w-full h-32 sm:h-72 md:h-96 rounded-lg border-0 bg-black"
+        allow="fullscreen"
+      />
+    ),
+    ariaLabel: "Project 3: Reward Generator. Gamified self-care reward interface.",
   },
 ];
 
@@ -41,12 +56,7 @@ const Projects = () => {
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-16"
       aria-labelledby="projects-heading"
     >
-      <h2
-        id="projects-heading"
-        className="text-4xl font-bold mb-8 text-black dark:text-white"
-      >
-        Projects
-      </h2>
+      <h2 className="text-3xl font-bold mb-4">Projects</h2>
 
       {/* 📺 TV Wrapper */}
       <div
@@ -57,7 +67,7 @@ const Projects = () => {
       >
         <div
           className={`transition-transform duration-300 ease-in-out ${
-            animate ? 'rotate-y-180' : ''
+            animate ? "rotate-y-180" : ""
           }`}
         >
           <h3
@@ -76,11 +86,7 @@ const Projects = () => {
       </div>
 
       {/* 💠 Diamonds for switching */}
-      <div
-        role="group"
-        aria-label="Select a project"
-        className="flex gap-4"
-      >
+      <div role="group" aria-label="Select a project" className="flex gap-4">
         {projects.map((project) => (
           <button
             key={project.id}
@@ -88,8 +94,8 @@ const Projects = () => {
             aria-label={project.ariaLabel}
             className={`w-10 h-10 text-xl rounded-full transform transition-transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:scale-110 ${
               activeProject.id === project.id
-                ? 'bg-blue-800 text-white'
-                : 'bg-gray-300 dark:bg-gray-600 text-black dark:text-white'
+                ? "bg-blue-800 text-white"
+                : "bg-gray-300 dark:bg-gray-600 text-black dark:text-white"
             }`}
           >
             💠
