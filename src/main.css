@@ -45,3 +45,14 @@ body.dark ::-webkit-scrollbar-track {
 }
 
 /* SCROLL SECTION END */
+.fade-section {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
